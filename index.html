@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css"
+      integrity="sha512-JApjWRnfonFeGBY7t4yq8SWr1A6xVYEJgO/UMIYONxaR3C9GETKUg0LharbJncEzJF5Nmiv+Pr5QNulr81LjGQ=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo-container">
+          <img
+            src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"
+            alt="logo"
+          />
+        </div>
+        <ul class="nav-bar">
+          <li class="tab" name="HOME">HOME</li>
+          <li class="tab" name="LIKE">LIKED LIST</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="select-container">
+        <select class="filter-select">
+          <option value="popular">Popular</option>
+          <option value="now_playing">Now Playing</option>
+          <option value="top_rated">Top Rated</option>
+          <option value="upcoming">Upcoming</option>
+        </select>
+      </div>
+      <div class="page-container">
+        <button id="prevButton" class="btn">prev</button>
+        <p id="currentPage">1 / ?</p>
+        <button id="nextButton" class="btn">Next</button>
+      </div>
+      <div class="tab-view" id="homeContainer">
+        <div class="list-container" id="homeList"></div>
+      </div>
+      <div class="tab-view" id="likedContainer">
+        <div class="list-container" id="likedList"></div>
+      </div>
+    </main>
+
+    <div id="modal" style="display: none">
+      <div class="modal-container">
+        <div class="close-modal">
+          <i class="icon ion-ios-close"></i>
+        </div>
+        <div class="modal-content">
+          <div class="modal-img"></div>
+          <div class="modal-info">
+            <h2 id="modal-movie-title"></h2>
+            <br />
+            <h3>Overview</h3>
+            <p class="modal-overview"></p>
+            <h3>Genres</h3>
+            <div class="genre-container"></div>
+            <h3>Rating</h3>
+            <p class="rating"></p>
+            <h3>Production companies</h3>
+            <div class="production-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
